@@ -1,196 +1,210 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-
-body{
-
-    min-height: 100vh;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+body {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.robot{
-
-display: flex;
-justify-content: center;
-align-items: center;
-height: 20%;
-width: 100%;
-align-self: normal;
-position: relative;
-
+.robot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+  align-self: normal;
+  position: relative;
 }
 
-#robozin{
-
-    border-radius: 40%;
-    display: flex;
-    width: 50px;
-    height: 50px;
-
+#robozin {
+  border-radius: 40%;
+  display: flex;
+  width: 140px;
+  height: 140px;
+  background-position: center;
+  position: absolute;
+  animation-name: roboAnima;
+  animation-duration: 3s;
 }
 
-*{
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-
+* {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
 }
 
-#container{
-
-    width: 500px;
-    height: 500px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    box-shadow: 10px 10px 10px 3px;
-
+#container {
+  width: 500px;
+  height: 500px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px 3px;
 }
 
-
-.inputs{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-
+.inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 }
 
-#usuario{
-
-    margin-bottom: 120px;
-    background-color: rgb(82, 69, 69);
-    border: none;
-    height: 30px;
-    width: 420px;
-    border-radius: 5px;
-    color: #ffffff;
-    text-align: center;
-    position: absolute;
-    animation-name: anima;
-    animation-duration: 3s;
+#usuario {
+  margin-bottom: 120px;
+  background-color: rgb(82, 69, 69);
+  border: none;
+  height: 30px;
+  width: 420px;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  animation-name: anima;
+  animation-duration: 3s;
 }
 
-#senha{
-
-    position: absolute;
-    height: 30px;  
-    width: 420px;
-    background-color: rgb(82, 69, 69);
-    border: none;
-    border-radius: 5px;
-    animation-name: anima4;
-    animation-duration: 2s;
-    text-align: center;
-
+#senha {
+  position: absolute;
+  height: 30px;
+  width: 420px;
+  background-color: rgb(82, 69, 69);
+  border: none;
+  border-radius: 5px;
+  animation-name: anima;
+  animation-duration: 2s;
+  text-align: center;
 }
 
-::placeholder{
-
-    color: rgb(189, 179, 179);
-
-
+::placeholder {
+  color: rgb(189, 179, 179);
 }
 
-#entrar{
-
-    margin-top: 120px;
-    background-color: #4fc7ff;
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    width: 420px;
-    position: absolute;
-    animation-name: anima2;
-    animation-duration: 3s;
-    z-index: 2;
-    transition: 200ms;
-
+#entrar {
+  margin-top: 120px;
+  background-color: #4fc7ff;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 420px;
+  position: absolute;
+  animation-name: anima2;
+  animation-duration: 3s;
+  z-index: 2;
+  transition: 200ms;
 }
 
-#entrar:hover{
-
-    cursor: pointer;
-    background-color: #4FFFD8;
-    transform: scale(1.1);
-    box-shadow: 1px 10px 10px 1px;
-    font-weight: bold;
-
+#entrar:hover {
+  cursor: pointer;
+  background-color: #4fffd8;
+  transform: scale(1.1);
+  box-shadow: 1px 10px 10px 1px;
+  font-weight: bold;
 }
 
-footer{
-
-    border-color: red;
-    position: absolute;
-    margin-top: 410px;
-    width: 400px;
-    border-top: 1px solid rgb(82, 69, 69);
-    text-align: center;
-    animation-name: anima3;
-    animation-duration: 3s;
-    
+footer {
+  border-color: red;
+  position: absolute;
+  margin-top: 410px;
+  width: 400px;
+  border-top: 1px solid rgb(82, 69, 69);
+  text-align: center;
+  animation-name: anima3;
+  animation-duration: 3s;
 }
 
-footer a{
-
-    color: #4fc7ff;
-
+footer a {
+  color: #4fc7ff;
 }
 
-footer a:hover{
-
-    transition: 200ms;
-    color: #4FFFD8;
-
+footer a:hover {
+  transition: 200ms;
+  color: #4fffd8;
 }
 
-@media screen and (max-width:720px){
+@media screen and (max-width: 720px) {
+  footer p,
+  footer a {
+    font-size: 13px;
+  }
 
-    footer p, footer a{
-
-        font-size: 13px;
-
-    }
-
-    #usuario, #senha, #entrar{
-
-        width:320px;
-
-    }
-
-
+  #usuario,
+  #senha,
+  #entrar {
+    width: 320px;
+  }
 }
 
-
-@keyframes anima{
-
-    from{transform: translateX(900px);}
-    to{transform: translateX(-990px);}
-
+@keyframes anima {
+  from {
+    transform: translateX(900px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 
-@keyframes anima2{
-
-    from{margin-top:900px}
-    to{margin-top: 120px;}
-
+@keyframes anima2 {
+  from {
+    transform: translateY(900px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
-@keyframes anima3{
-
-    0%{visibility: hidden;}
-    100%{visibility: hidden;}
-
+@keyframes anima3 {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
 }
 
-@keyframes anima4{
+.bubble {
+  bottom: 100px;
+  left: 200px;
+  position: relative;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  width: 300px;
+  background: #4fffd8;
+  border-radius: 40px;
+  padding: 24px;
+  text-align: center;
+  color: #000;
+  animation-name: bubbleAnima;
+  animation-duration: 5s;
+}
 
-    from{margin-left: 900px;}
-    to{margin-left: 0px;}
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #4fffd8;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #4fffd8;
+  border-bottom: 20px solid transparent;
+  left: 32px;
+  bottom: -24px;
+}
+
+@keyframes bubbleAnima {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@keyframes roboAnima {
+  0% {
+    scale: 0;
+  }
 }

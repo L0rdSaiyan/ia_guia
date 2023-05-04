@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I.A Sté ou I.A Guia</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="shortcut icon" href="imgs/logo3.PNG" type="image/x-icon">
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+
+    <link rel="shortcut icon" href="imgs/logo3.PNG" type="image/x-icon" />
+    <!-- include the style -->
+<!-- include a theme -->
+<script src="/JS/App.js"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
 </head>
 
-<body>
-
+  <body>
     <div id="container">
-
-        <div class="robot">
-        <img src="/Media/robot-top-hat.gif" alt="logo"  id="robozin">
-
-    </div>
-
-        <div class="inputs">
-
-            <input type="text" id="usuario" placeholder="Usuário">
-            <input type="password" id="senha" placeholder="Senha">
-            <button id="entrar"onclick="confirm()">Entrar</button>
-
-
-
+      <div class="robot">
+        <img src="/Media/robot-top-hat.gif" alt="logo" id="robozin" />
+        <div class="bubble bubble-bottom-left">
+          Olá, eu sou a inteligência artificial feita pelo grupo da Sté do 1°
+          guia. Informe seu nome para continuar
         </div>
+      </div>
 
-        <footer>
-            <p>
-               Obrigado por estar presente aqui!
-            </p>
-        </footer>
+      <div class="inputs">
+        <input type="text" id="usuario" placeholder="Usuário" />
+        <input type="password" id="senha" placeholder="Senha" />
+        <button id="entrar" onclick="confirm()">Entrar</button>
+      </div>
 
+      <footer>
+        <p>Obrigado por estar presente aqui na nossa apresentação</p>
+      </footer>
     </div>
-
-</body>
+  </body>
+</html>
