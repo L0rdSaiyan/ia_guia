@@ -1,0 +1,140 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+
+    display: flex;
+
+}
+
+#titulo{
+
+    background-color: red;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box3 {
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 15px;
+    background: #00bfb6;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    font-family: arial;
+    position: relative;
+    flex-wrap: wrap;
+    clear: both;
+  }
+
+
+  .sb14:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid #00bfb6;
+    border-top: 15px solid #00bfb6;
+    border-bottom: 15px solid transparent;
+    left: -16px;
+    top: 0px;
+    flex-wrap: wrap;
+    clear: both;
+  }
+
+  
+.sb13:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid #00bfb6;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #00bfb6;
+    border-bottom: 15px solid transparent;
+    right: -16px;
+    top: 0px;
+    flex-wrap: wrap;
+    clear: both;
+  }
+  
+
+
+
+  .chat-1, .chat-3{
+
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 10%;
+    flex-wrap: wrap;
+    clear: both;
+  }
+
+  .chat-2{
+    display: flex;
+    top: 300px;
+    position: absolute;
+    right: 17%;
+    flex-wrap: wrap;
+    clear: both;
+
+}
+
+
+.chat-3{
+
+
+    top: 450px;
+    left: 10%
+ 
+
+
+}
+
+  @media screen and (max-width: 800px) {
+
+    .chat-1{
+      
+        left: 12%;
+    
+      }
+
+      .chat-2{
+
+        right: 12%
+
+      }
+    
+  }
+
+  @media screen and (min-width: 900px){
+
+    .chat-1{
+
+    left: 10%
+
+    }
+
+    .chat-2{
+
+        right: 12%;
+
+    }
+
+  }
+
+
+
+
