@@ -112,6 +112,9 @@
     right: 17%;
     flex-wrap: wrap;
     clear: both;
+    animation: moveLeft 2s;
+    animation-delay: 4s;
+
 
 }
 
@@ -120,7 +123,7 @@
 
 
     top: 450px;
-    left: 10%
+    left: 10%;
  
 
 
@@ -172,4 +175,18 @@
     }
   }
 
-  
+  @keyframes moveLeft{
+
+    from{
+
+      right: -300px;
+
+    }
+
+    to{
+
+      right: 12%
+
+    }
+
+  }
