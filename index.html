@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I.A Sté ou I.A Guia</title>
     <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
 
     <link rel="shortcut icon" href="imgs/logo3.PNG" type="image/x-icon" />
     <!-- include the style -->
-<!-- include a theme -->
-<script src="/JS/App.js"></script>
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-
-</head>
+    <!-- include a theme -->
+    <script src="/JS/App.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+  </head>
 
   <body>
     <div id="container">
@@ -28,7 +30,17 @@
 
       <div class="inputs">
         <input type="text" id="usuario" placeholder="Usuário" />
-        <input type="password" id="senha" placeholder="Senha" />
+        <select name="select" id="sala">
+          <option value="1enfermagem">1° Enfermagem</option>
+          <option value="1guia">1° Guia de Turismo</option>
+          <option value="1informática">1° Informática</option>
+          <option value="2enfermagem">2° Enfermagem</option>
+          <option value="2guia">2° Guia de Turismo</option>
+          <option value="2infor">2° Informática</option>
+          <option value="3enfer">3° Enfermagem</option>
+          <option value="3guia">3° Guia de Turismo</option>
+          <option value="3infor">3° Informática</option>
+        </select>
         <button id="entrar" onclick="confirm()">Entrar</button>
       </div>
 

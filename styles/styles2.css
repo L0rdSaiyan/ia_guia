@@ -23,12 +23,19 @@
 }
 
 
-.header-msg{
+.header-msg-1,.header-msg-2{
 
     display: flex;
     font-size: 14px;
     position: absolute;
-    bottom: 40px;
+    bottom: 150px;
+}
+
+
+.header-msg-2{
+
+  bottom: 40px;
+
 }
 
 .header-msg-user{
@@ -46,7 +53,7 @@
     margin: 50px auto;
     border-radius: 15px;
     background: #00bfb6;
-    color: #fff;
+    color: #eee6e6;
     padding: 20px;
     text-align: center;
     font-weight: 900;
@@ -204,3 +211,35 @@
     color: #fff;
     resize: none;
   }
+
+  .iconUser{
+
+
+    right: -80px;
+    background-image: url(/Media/anonnymous.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .iconBot{
+    
+    background-image: url(/Media/robot-top-hat.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: -80px;
+
+  }
+  .iconBot, .iconUser{
+
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    position: absolute;
+    top: 25px;
+
+  }
+
+  

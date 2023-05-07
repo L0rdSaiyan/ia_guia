@@ -1,12 +1,21 @@
-function confirm(){
-    let usuario = document.getElementById("usuario").value
+function confirm() {
+  let usuario = document.getElementById("usuario").value;
 
-    alertify.alert('I.A do Guia', `Cadastro realizado com sucesso! Bem vindo(a) ${usuario}`, function(){alertify.success('Aproveite!')});
+  let sala = document.getElementById("sala");
+  let value = sala.options[sala.selectedIndex].value;
+  let text = sala.options[sala.selectedIndex].text;
 
-    setTimeout(()=>{
+  alertify.alert(
+    "I.A do Guia",
+    `Cadastro realizado com sucesso! Bem vindo(a) ${usuario} do ${text}`,
+    function () {
+      alertify.success("Aproveite!");
+    }
+  );
 
-        window.location.replace("/Pages/Page2.html")
-
-    },2000)
-
+  setTimeout(() => {
+    window.location.replace("/Pages/Page2.html");
+  }, 2000);
 }
+
+

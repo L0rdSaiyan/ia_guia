@@ -29,7 +29,6 @@ body {
   animation-duration: 3s;
 }
 
-
 #container {
   width: 500px;
   height: 500px;
@@ -62,7 +61,7 @@ body {
   animation-duration: 3s;
 }
 
-#senha {
+#sala {
   position: absolute;
   height: 30px;
   width: 420px;
@@ -72,6 +71,7 @@ body {
   animation-name: anima;
   animation-duration: 2s;
   text-align: center;
+  color: #ffffff;
 }
 
 ::placeholder {
@@ -127,7 +127,7 @@ footer a:hover {
   }
 
   #usuario,
-  #senha,
+  #sala,
   #entrar {
     width: 320px;
   }
@@ -175,9 +175,8 @@ footer a:hover {
   color: #000;
   animation-name: bubbleAnima;
   animation-duration: 5s;
-  font-family: 'Montserrat', sans-serif;
-font-family: 'Noto Serif', serif;
-
+  font-family: "Montserrat", sans-serif;
+  font-family: "Noto Serif", serif;
 }
 
 .bubble-bottom-left:before {
