@@ -102,8 +102,7 @@
     left: 10%;
     flex-wrap: wrap;
     clear: both;
-    animation-name: send-msg-ai;
-    animation-duration: 2s;
+    animation: moveRight 2s;
   }
 
   .chat-2{
@@ -162,11 +161,15 @@
 
 
 
-@keyframes send-msg-ai{
-
-    from{right: -1000px}
-    to{right: 0px}
-    
 
 
-}
+  @keyframes moveRight {
+    from {
+      left: -300px;
+    }
+    to {
+      left: 10%;
+    }
+  }
+
+  
