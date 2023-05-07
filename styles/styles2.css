@@ -22,6 +22,25 @@
 
 }
 
+
+.header-msg{
+
+    display: flex;
+    font-size: 14px;
+    position: absolute;
+    bottom: 40px;
+}
+
+.header-msg-user{
+
+    display: flex;
+    font-size: 14px;
+    position: absolute;
+    bottom: 40px;
+    right: 14px;
+
+}
+
 .box3 {
     width: 300px;
     margin: 50px auto;
@@ -35,12 +54,14 @@
     position: relative;
     flex-wrap: wrap;
     clear: both;
+   
   }
 
 
   .sb14:before {
     content: "";
     width: 0px;
+    display: flex;
     height: 0px;
     position: absolute;
     border-left: 15px solid transparent;
@@ -51,6 +72,7 @@
     top: 0px;
     flex-wrap: wrap;
     clear: both;
+
   }
 
   
@@ -80,6 +102,8 @@
     left: 10%;
     flex-wrap: wrap;
     clear: both;
+    animation-name: send-msg-ai;
+    animation-duration: 2s;
   }
 
   .chat-2{
@@ -138,3 +162,11 @@
 
 
 
+@keyframes send-msg-ai{
+
+    from{right: -1000px}
+    to{right: 0px}
+    
+
+
+}
