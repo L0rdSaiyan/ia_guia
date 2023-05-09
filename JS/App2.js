@@ -1,15 +1,26 @@
-// console.log(window.innerWidth);
+let msgUser = document.getElementById("msgUser");
 
-let msg = document.getElementById("msgUser")
-function sendMsg(){
-    const msg = document.getElementById("msgUser")
-
-    alert(msg.value)
-
-
+function sendMsg() {
+  alert(msgUser.value);
 }
+
 document.addEventListener("keydown", function(event) {
-    if (event.code === "Enter") {
-        alert("oi");
-    }
+  if (event.code === "Enter") {
+
+    const msgEnviada = document.getElementById("msg-usuario")
+    msgEnviada.innerText = msgEnviar.value
+  
+
+  }
 });
+
+let msgEnviar = document.getElementById("msg-area");
+let btnEnviar = document.getElementById("btn");
+
+btnEnviar.addEventListener('click', function() {
+  const msgEnviada = document.getElementById("msg-usuario")
+  msgEnviada.innerText = msgEnviar.value
+
+
+});
+

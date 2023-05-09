@@ -1,3 +1,4 @@
+console.log(screen.width)
 function confirm() {
   let usuario = document.getElementById("usuario").value;
 
