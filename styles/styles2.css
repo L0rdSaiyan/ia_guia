@@ -105,7 +105,7 @@
 
     display: flex;
     position: absolute;
-    top: 150px;
+    top: 100px;
     left: 10%;
     flex-wrap: wrap;
     clear: both;
@@ -243,3 +243,21 @@
   }
 
   
+  .chat{
+
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 600px;
+
+  }
+
+  #msg-area{
+
+border-radius: 12px;
+  width: 60%;
+  height: 25px;
+
+  }
