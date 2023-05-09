@@ -391,6 +391,12 @@ display: none;
 
   }
 
+  #titulo-circle:hover{
+
+
+    cursor: pointer;
+  }
+
 
   :root {
     --cor-1: #2D049A;
