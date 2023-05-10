@@ -24,12 +24,14 @@ btnEnviar.addEventListener("click", function () {
   msgEnviada.innerText = novaMsg;
   chat2.className = "chat-2";
 
+
+  //nota : Colocar todas as palavras positivas em um array e as negativas em outro, e atráves de um for each, fazer a checagem
   if (novaMsg.toLowerCase().includes("ola") || novaMsg.toLowerCase().includes("olá") || novaMsg.toLowerCase().includes("oi") || novaMsg.toLowerCase().includes("eae") || novaMsg.toLowerCase().includes("eai") || novaMsg.toLowerCase().includes("eaí")) {
     if (novaMsg.toLowerCase().includes("ótimo") || novaMsg.toLowerCase().includes("otimo") || novaMsg.toLowerCase().includes("ótima") || novaMsg.toLowerCase().includes("otima")) {
       msgBot = "Olá! Nossa equipe fica muito feliz por sua avaliação positiva!"
     }else if(novaMsg.toLowerCase().includes("ruim") || novaMsg.toLowerCase().includes("péssima") || novaMsg.toLowerCase().includes("pessima") || novaMsg.toLowerCase().includes("horrível") || novaMsg.toLowerCase().includes("horrivel") || novaMsg.toLowerCase().includes("não gostei") || novaMsg.toLowerCase().includes("nao gostei")){
 
-      msgBot = "Olá! Puxa, lamentamos por não ter sido uma experiência tão boa"
+      msgBot = "mentira, nós sabe que somos os melhores &#128068;"
 
     }
   }
