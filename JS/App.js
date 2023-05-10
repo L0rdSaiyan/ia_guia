@@ -1,8 +1,5 @@
 let usuario = '';
 const inputUsuario = document.getElementById("usuario");
-inputUsuario.addEventListener("input", function() {
-  usuario = inputUsuario.value;
-});
 
 function confirmEntrar() {
   let sala = document.getElementById("sala");
