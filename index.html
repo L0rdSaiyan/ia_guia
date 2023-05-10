@@ -7,27 +7,27 @@
     <title>I.A Sté ou I.A Guia</title>
     <link rel="stylesheet" href="styles/style.css">
     <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
     />
-
+    
     <link rel="shortcut icon" href="imgs/logo3.PNG" type="image/x-icon" />
     <!-- include the style -->
     <!-- include a theme -->
-    <script src="/JS/App.js"></script>
+    <script src="/JS/App.js" ></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
   </head>
 
   <body>
     <div id="container">
       <div class="robot">
-        <img src="/Media/robot-top-hat.gif" alt="logo" id="robozin" />
+        <img src="/Media/robot-top-hat.gif" alt="logo robô" id="robozin" />
         <div class="bubble bubble-bottom-left">
           Olá, eu sou a inteligência artificial feita pelo grupo da Sté do 1°
           guia. Informe seu nome para continuar
         </div>
       </div>
-
+      
       <div class="inputs">
         <input type="text" id="usuario" placeholder="Usuário" />
         <select name="select" id="sala">
@@ -41,9 +41,9 @@
           <option value="3guia">3° Guia de Turismo</option>
           <option value="3infor">3° Informática</option>
         </select>
-        <button id="entrar" onclick="confirm()">Entrar</button>
+        <button id="entrar" onclick="confirmEntrar()">Entrar</button>
       </div>
-
+      
       <footer>
         <p>Obrigado por estar presente aqui na nossa apresentação</p>
       </footer>

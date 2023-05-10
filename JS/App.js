@@ -1,11 +1,12 @@
-console.log(screen.width)
-function confirm() {
-  let usuario = document.getElementById("usuario").value;
+let usuario = '';
+const inputUsuario = document.getElementById("usuario");
+inputUsuario.addEventListener("input", function() {
+  usuario = inputUsuario.value;
+});
 
+function confirmEntrar() {
   let sala = document.getElementById("sala");
-  let value = sala.options[sala.selectedIndex].value;
   let text = sala.options[sala.selectedIndex].text;
-
   alertify.alert(
     "I.A do Guia",
     `Cadastro realizado com sucesso! Bem vindo(a) ${usuario} do ${text}`,
@@ -13,10 +14,9 @@ function confirm() {
       alertify.success("Aproveite!");
     }
   );
-
+  
   setTimeout(() => {
     window.location.replace("/Pages/Page2.html");
   }, 2000);
 }
-
 
