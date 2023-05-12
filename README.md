@@ -1,2 +1,1 @@
-# GUIAKKKK
-Só um site aí pra avaliar o atendimento de clientes com I.A
+Projeto de Chat Bot que simula uma inteligência artificial 
