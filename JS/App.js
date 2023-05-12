@@ -1,12 +1,12 @@
-let usuario = '';
-const inputUsuario = document.getElementById("usuario");
 
 function confirmEntrar() {
   let sala = document.getElementById("sala");
   let text = sala.options[sala.selectedIndex].text;
+  const Usuario = document.getElementById("usuario");
+
   alertify.alert(
     "I.A do Guia",
-    `Cadastro realizado com sucesso! Bem vindo(a) ${usuario} do ${text}`,
+    `Cadastro realizado com sucesso! Bem vindo(a) ${usuario.value} do ${text}`,
     function () {
       alertify.success("Aproveite!");
     }
