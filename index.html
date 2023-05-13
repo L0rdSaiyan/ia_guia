@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I.A Sté ou I.A Guia</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.css">
     <link
     rel="stylesheet"
     href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
@@ -43,7 +46,7 @@
         </select>
         <button id="entrar" onclick="confirmEntrar()">Entrar</button>
       </div>
-      
+      <span id="duvida" onclick="popup()">O que <b>Guia de Turismo</b> e <b>Robótica</b> tem a ver com <b>Ações Sustentáveis?</b></span>
       <footer>
         <p>Obrigado por estar presente aqui na nossa apresentação</p>
       </footer>

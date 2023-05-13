@@ -73,6 +73,7 @@ btnEnviar.addEventListener("click", function () {
   }else{
 
   let novaMsg = msgEnviar.value;
+  msgEnviar.value = ''
   cabecalho.innerHTML = user;
  
 
@@ -155,6 +156,8 @@ document.addEventListener("keydown", (event) => {
     cabecalho.innerHTML = user;
     msgEnviada.innerText = novaMsg;
     chat2.className = "chat-2";
+    msgEnviar.value = ''
+
     let msgBot = ""; // inicializa com valor padrão vazio
 
     msgEnviada.innerText = novaMsg;

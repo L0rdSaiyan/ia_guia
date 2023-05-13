@@ -1,18 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 body {
   min-height: 100vh;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(160deg,#48b49d, white);
+  background-image: linear-gradient(160deg, #48b49d, white);
 }
 
-*{
-
-  font-family: 'Noto Sans JP', sans-serif;
-
-
+* {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .robot {
@@ -198,6 +195,26 @@ footer a:hover {
   bottom: -24px;
 }
 
+
+#duvida {
+  display: flex;
+  position: absolute;
+  bottom: 170px;
+  font-size: 15px;
+  animation-name: duvidaAnima;
+  animation-duration: 3s;
+}
+
+#duvida:hover {
+  cursor: pointer;
+}
+
+b{
+  margin-right: 4px;
+  margin-left: 4px
+
+  
+}
 @keyframes bubbleAnima {
   from {
     opacity: 0;
@@ -213,12 +230,27 @@ footer a:hover {
   }
 }
 
-
 @media (max-width: 800px) {
   .bubble {
     font-size: 15px;
     width: 180px; /* ou outro valor que você preferir */
     left: 130px;
     bottom: 80px;
+  }
+
+#duvida{
+
+  font-size: 12px;
+
+}
+
+}
+
+@keyframes duvidaAnima {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
   }
 }
