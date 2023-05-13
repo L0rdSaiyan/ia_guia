@@ -79,6 +79,36 @@ body{
   }
 
 
+  
+    .iconUser{
+  
+  
+      right: -80px;
+      background-image: url(/Media/anonnymous.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+    .iconBot{
+      
+      background-image: url(/Media/robot-top-hat.gif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      left: -80px;
+  
+    }
+    .iconBot, .iconUser{
+  
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      display: flex;
+      position: absolute;
+      top: 25px;
+  
+    }
   .sb14:before {
     content: "";
     width: 0px;
@@ -220,7 +250,11 @@ display: none;
 
       }
 
+      .iconBot{
 
+        left: -42px;
+        top: -30px;
+      }
 
 
 
@@ -316,36 +350,6 @@ display: none;
   }
 
  
-
-  .iconUser{
-
-
-    right: -80px;
-    background-image: url(/Media/anonnymous.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-  }
-  .iconBot{
-    
-    background-image: url(/Media/robot-top-hat.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: -80px;
-
-  }
-  .iconBot, .iconUser{
-
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    display: flex;
-    position: absolute;
-    top: 25px;
-
-  }
 
   
   .chat{

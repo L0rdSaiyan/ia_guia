@@ -212,3 +212,13 @@ footer a:hover {
     scale: 0;
   }
 }
+
+
+@media (max-width: 800px) {
+  .bubble {
+    font-size: 15px;
+    width: 180px; /* ou outro valor que você preferir */
+    left: 130px;
+    bottom: 80px;
+  }
+}
