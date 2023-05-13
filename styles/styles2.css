@@ -27,7 +27,7 @@ body{
 .header-msg-1{
 
 
-  bottom: 115px;
+  bottom: 160px;
 
 }
 
@@ -41,7 +41,7 @@ body{
 
 .header-msg-2{
 
-  bottom: 65px;
+  bottom: 45px;
 
 }
 
@@ -50,7 +50,7 @@ body{
     display: flex;
     font-size: 14px;
     position: absolute;
-    bottom: -10px;
+    bottom: -5px;
     right: 22px;
     height: 100%;
 

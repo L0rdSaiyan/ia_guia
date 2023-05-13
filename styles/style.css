@@ -96,6 +96,7 @@ body {
 #entrar:hover {
   cursor: pointer;
   background-color: #4fffd8;
+  color: #ffffff;
   transform: scale(1.1);
   box-shadow: 1px 10px 10px 1px;
   font-weight: bold;
