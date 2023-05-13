@@ -1,5 +1,5 @@
 let btnEnviar = document.getElementById("btn");
-const logo = document.getElementById("titulo-circle");
+const logo = document.getElementById("titulo-2");
 const arraySaudacao = ["olá", "ola", "eae", "eaí", "hello", "fala tu", "aoba"];
 const arrayBom = [
   "ótimo",
@@ -26,6 +26,12 @@ const arrayRuim = [
   "desastre",
   "caos",
   "muito ruim",
+  "idiota",
+  "desperdicio de tempo",
+  "desperdício de tempo",
+  "catastrofe",
+  "merda",
+  "bosta"
 ];
 
   const arraySugestões = [
@@ -37,9 +43,8 @@ const arrayRuim = [
     "alimentação",
     "alimentaçao",
     "alimentacao",
-
-
-
+    "seletivo",
+    "coleta"
 
   ]
 
@@ -89,6 +94,11 @@ btnEnviar.addEventListener("click", function () {
   if (msgBot === "") {
     msgBot = "Olá!";
   }
+  if(novaMsg.toLowerCase().includes("gostei") || novaMsg.toLowerCase().includes("curtido")){
+
+    msgBot += "Ficamos felizes por você ter gostado da apresentação!"
+
+  }else{
 
   arrayBom.forEach((elemento, index) => {
     if (novaMsg.toLowerCase().includes(elemento)) {
@@ -96,8 +106,10 @@ btnEnviar.addEventListener("click", function () {
         ", ficamos felizes por você ter achado a apresentação " +
         elemento +
         " ";
-    }
+    } 
   });
+
+}
 
   arrayRuim.forEach((elemento, index) => {
     if (novaMsg.toLowerCase().includes(elemento)) {
@@ -108,6 +120,8 @@ btnEnviar.addEventListener("click", function () {
   if (msgBot === "" || msgBot === "Olá!") {
     msgBot += " Obrigado"; // define valor padrão se nenhuma condição foi satisfeita
   }
+
+  msgBot += ". Sua sugestão foi registrada!"
 
   setTimeout(() => {
     chat3.className = "chat-3";
@@ -173,6 +187,10 @@ document.addEventListener("keydown", (event) => {
       msgBot = "Olá!";
     }
 
+    if(novaMsg.toLowerCase().includes("gostei") || novaMsg.toLowerCase().includes("curti")){
+
+      msgBot += "Ficamos felizes por você ter gostado da apresentação!"
+    }else{  
     arrayBom.forEach((elemento, index) => {
       if (novaMsg.toLowerCase().includes(elemento)) {
         msgBot +=
@@ -181,7 +199,7 @@ document.addEventListener("keydown", (event) => {
           " ";
       }
     });
-
+  }
     arrayRuim.forEach((elemento, index) => {
       if (novaMsg.toLowerCase().includes(elemento)) {
         msgBot +=
@@ -192,6 +210,9 @@ document.addEventListener("keydown", (event) => {
     if (msgBot === "" || msgBot === "Olá!") {
       msgBot += " Obrigado"; // define valor padrão se nenhuma condição foi satisfeita
     }
+
+    msgBot += ". Sua sugestão foi registrada!"
+
 
     setTimeout(() => {
       chat3.className = "chat-3";
