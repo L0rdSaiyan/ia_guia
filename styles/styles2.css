@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #affff8;
@@ -446,4 +447,14 @@ body {
     opacity: 0;
     border-radius: 50%;
   }
+}
+
+@media (max-height:600px){
+
+  .chat{
+
+    top: 900px;
+
+  }
+
 }

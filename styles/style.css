@@ -51,6 +51,15 @@ body {
   position: absolute;
 }
 
+inputs{
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 #usuario {
   margin-bottom: 120px;
   background-color: rgb(82, 69, 69);
@@ -110,18 +119,18 @@ footer {
   position: absolute;
   margin-top: 410px;
   width: 400px;
+  text-decoration: underline;
   border-top: 1px solid rgb(82, 69, 69);
   text-align: center;
   animation-name: anima3;
   animation-duration: 3s;
 }
 
-footer a {
-  color: #4fc7ff;
-}
 
-footer a:hover {
+
+footer:hover {
   transition: 200ms;
+  cursor: pointer;
   color: #4fffd8;
 }
 
@@ -165,49 +174,8 @@ footer a:hover {
   }
 }
 
-.bubble {
-  bottom: 80px;
-  left: 200px;
-  position: relative;
-  font-family: sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  width: 300px;
-  background: #4fffd8;
-  border-radius: 40px;
-  padding: 24px;
-  text-align: center;
-  color: #000;
-  animation-name: bubbleAnima;
-  animation-duration: 5s;
-}
-
-.bubble-bottom-left:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 24px solid #4fffd8;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #4fffd8;
-  border-bottom: 20px solid transparent;
-  left: 32px;
-  bottom: -24px;
-}
 
 
-#duvida {
-  display: flex;
-  position: absolute;
-  bottom: 170px;
-  font-size: 15px;
-  animation-name: duvidaAnima;
-  animation-duration: 3s;
-}
-
-#duvida:hover {
-  cursor: pointer;
-}
 
 b{
   margin-right: 4px;
@@ -233,16 +201,18 @@ b{
 @media (max-width: 800px) {
   .bubble {
     font-size: 15px;
-    width: 180px; /* ou outro valor que você preferir */
+    width: 180px; 
     left: 130px;
     bottom: 80px;
   }
 
-#duvida{
-
-  font-size: 12px;
-
 }
+#sala{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
 }
 
@@ -254,3 +224,5 @@ b{
     visibility: hidden;
   }
 }
+
+
