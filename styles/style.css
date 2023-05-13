@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
 body {
   min-height: 100vh;
   background-size: cover;
@@ -7,6 +6,13 @@ body {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(160deg,#48b49d, white);
+}
+
+*{
+
+  font-family: 'Noto Sans JP', sans-serif;
+
+
 }
 
 .robot {
@@ -177,8 +183,6 @@ footer a:hover {
   color: #000;
   animation-name: bubbleAnima;
   animation-duration: 5s;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Noto Serif", serif;
 }
 
 .bubble-bottom-left:before {

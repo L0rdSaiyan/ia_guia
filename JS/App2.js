@@ -57,6 +57,21 @@ logo.addEventListener("click", () => {
 
 btnEnviar.addEventListener("click", function () {
   let msgBot = ""; // inicializa com valor padrão vazio
+
+  if(msgEnviar.value === ''){
+
+    Swal.fire({
+
+      title: 'ERRO!',
+      text: 'Não é possível enviar mensagens em branco!',
+      icon: 'error',
+      confirmButtonText: 'Ok'
+
+
+    })
+
+  }else{
+
   let novaMsg = msgEnviar.value;
   cabecalho.innerHTML = user;
  
@@ -97,10 +112,45 @@ btnEnviar.addEventListener("click", function () {
     chat3.className = "chat-3";
     chatBot.innerHTML = msgBot;
   }, 3000);
+
+
+  setTimeout(()=>{
+
+
+    Swal.fire({
+      title: 'Obrigado!',
+      text: 'Sua sugestão foi registrada!',
+      icon: 'success',
+      confirmButtonText: 'Voltar para a página inicial'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "/index.html";
+  
+      }
+  
+    })
+
+  },10000)
+  }
 });
 
 document.addEventListener("keydown", (event) => {
   if (event.code === "Enter") {
+    event.preventDefault()
+
+    if(msgEnviar.value === ''){
+
+      Swal.fire({
+  
+        title: 'ERRO!',
+        text: 'Não é possível enviar mensagens em branco!',
+        icon: 'error'  
+  
+      })
+  
+    }else{
+
+
     let novaMsg = msgEnviar.value;
     cabecalho.innerHTML = user;
     msgEnviada.innerText = novaMsg;
@@ -144,7 +194,7 @@ document.addEventListener("keydown", (event) => {
       chat3.className = "chat-3";
       chatBot.innerHTML = msgBot;
     }, 3000);
-  }
+  
 
   setTimeout(()=>{
 
@@ -162,7 +212,7 @@ document.addEventListener("keydown", (event) => {
   
     })
 
-  })
-
-
+  },10000)
+    }
+  }
 });
