@@ -32,7 +32,7 @@ const confirmEntrar = ()=> {
     );
 
     setTimeout(() => {
-      window.location.replace("/Pages/Page2.html");
+      window.location.replace("Pages/Page2.html");
     }, 2000);
   }
 }

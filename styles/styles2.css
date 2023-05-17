@@ -65,13 +65,13 @@ body {
 
 .iconUser {
   right: -80px;
-  background-image: url(/Media/anonnymous.png);
+  background-image: url(../Media/anonnymous.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .iconBot {
-  background-image: url(/Media/robot-top-hat.gif);
+  background-image: url(../Media/robot-top-hat.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
