@@ -57,7 +57,7 @@ let user = window.localStorage.getItem("usuario");
 let cabecalho = document.querySelector(".header-msg-user");
 
 logo.addEventListener("click", () => {
-  window.location.href = "/index.html";
+  window.location.href = "/Pages/index.html";
 });
 
 btnEnviar.addEventListener("click", function () {
@@ -139,7 +139,7 @@ btnEnviar.addEventListener("click", function () {
       confirmButtonText: 'Voltar para a página inicial'
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = "/index.html";
+        window.location.href = "/Pages/index.html";
   
       }
   
@@ -230,13 +230,13 @@ document.addEventListener("keydown", (event) => {
       confirmButtonText: 'Voltar para a página inicial'
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = "/index.html";
+        window.location.href = "./index.html";
   
       }
   
     })
 
-  },10000)
+  },7000)
     }
   }
 });

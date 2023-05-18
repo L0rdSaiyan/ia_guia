@@ -4,7 +4,8 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #affff8;
+  background-color: rgb(82, 69, 69);
+
 }
 * {
   font-family: "Noto Sans JP", sans-serif;
@@ -15,7 +16,7 @@ body {
 }
 
 #titulo {
-  background-color: #5269e9;
+  background-color: rgb(22, 26, 37);
   width: 100%;
   height: 70px;
   display: flex;
@@ -24,7 +25,7 @@ body {
 }
 
 .header-msg-1 {
-  bottom: 160px;
+  bottom: 134px;
 }
 
 .header-msg-1,
@@ -163,6 +164,8 @@ body {
   left: 10%;
 }
 
+
+
 @media screen and (max-width: 800px) {
   .chat-1 {
     left: 12%;
@@ -204,11 +207,16 @@ body {
   .chat-2 {
     right: 12%;
   }
+
+  
+
 }
 
-@media screen and (max-width: 700) {
+
+
+@media screen and (max-width: 700px) {
   .chat-1 {
-    left: 20%;
+    left: 10%;
   }
 
   .chat-2 {
@@ -233,7 +241,10 @@ body {
   .iconBot {
     bottom: 500px;
   }
+
+  
 }
+
 
 @keyframes sendMsg-ia {
   from {
@@ -264,7 +275,6 @@ body {
   justify-content: center;
   width: 100%;
   top: 560px;
-  background-color: #affff8;
 }
 
 #msg-area {
@@ -282,6 +292,7 @@ body {
   width: 50px;
   height: 50px;
   transition: 200ms;
+  
 }
 
 ::placeholder {
@@ -315,18 +326,41 @@ body {
   --cor-1: #2d049a;
   --cor-2: #fbfaed;
   --cor-3: #6aa6ff;
-  --cor-4: #aecfff;
+  --cor-4: #8CFD0B;
 }
 
 .background {
   display: flex;
   position: absolute;
-  background-color: #6eb8c4;
+  background-color: #141414;
   height: 80%;
   width: 95%;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
     inset 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media (max-height: 600px){
+
+  .chat{
+
+    top: 900px;
+
+  }
+
+}
+
+@media (min-height: 700px){
+
+  .chat{
+
+    top: 630px;
+
+  }
+
+
 }
 
 .container-2 {
@@ -335,9 +369,9 @@ body {
   align-items: center;
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 100%; 
   z-index: -1;
-  background-color: #affff8;
+  background-color: rgb( 33, 41, 66 );
 }
 
 .circles {
