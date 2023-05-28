@@ -53,8 +53,10 @@ let msgEnviar = document.getElementById("msg-area");
 let chat2 = document.querySelector(".chat-2Inv");
 let chat3 = document.querySelector(".chat-3Inv");
 let chatBot = document.querySelector("#chatDoBot");
-let user = window.localStorage.getItem("usuario");
+let user = window.localStorage.getItem("usuario").replace(/\s+/g, ' ').trim();;
 let cabecalho = document.querySelector(".header-msg-user");
+const chat1 = document.querySelector("#chatUser").innerText = user;
+
 
 logo.addEventListener("click", () => {
   window.location.href = "/Pages/index.html";

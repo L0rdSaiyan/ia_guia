@@ -25,7 +25,7 @@ body {
 }
 
 .header-msg-1 {
-  bottom: 134px;
+  bottom: 85%;
 }
 
 .header-msg-1,
@@ -35,8 +35,16 @@ body {
   position: absolute;
 }
 
+#chatUser{
+
+
+  font-weight: 900;
+  font-family: arial;
+}
+
+
 .header-msg-2 {
-  bottom: 50px;
+  bottom: 85%;
   position: initial;
 }
 
@@ -220,8 +228,8 @@ body {
   }
 
   .chat-2 {
-    right: 20%;
-    bottom: 400px;
+    right: 40%;
+    bottom: 80%;
   }
 
   .sb14 {
@@ -234,8 +242,8 @@ body {
   }
 
   .iconUser {
-    left: 310px;
-    top: 500px;
+    left: 77%;
+    top: 50%;
   }
 
   .iconBot {
@@ -274,7 +282,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  top: 560px;
+  top: 80%;
 }
 
 #msg-area {
@@ -292,6 +300,9 @@ body {
   width: 50px;
   height: 50px;
   transition: 200ms;
+  background-color: #4fc7ff;
+  border-radius: 40%;
+  margin: 10px;
   
 }
 
@@ -304,6 +315,7 @@ body {
 #btn:hover {
   transform: scale(1.1);
   cursor: pointer;
+  box-shadow: rgb(236, 227, 227) 3px 5px 5px 3px;
 }
 
 #titulo-2 {
@@ -346,7 +358,7 @@ body {
 
   .chat{
 
-    top: 900px;
+    top: 80%;
 
   }
 
@@ -356,7 +368,7 @@ body {
 
   .chat{
 
-    top: 630px;
+    top: 80%;
 
   }
 
@@ -487,7 +499,7 @@ body {
 
   .chat{
 
-    top: 900px;
+    top: 90%;
 
   }
 

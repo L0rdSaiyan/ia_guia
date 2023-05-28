@@ -1,0 +1,59 @@
+Eu desenvolvi um chat bot utilizando as seguintes tecnologias: HTML5, CSS3, JavaScript (incluindo uma versão com React.js), AlertifyJS, SweetAlert2, SASS e Animate.css. Para o desenvolvimento, utilizei o Visual Studio Code como minha IDE.
+
+Configuração do ambiente:
+
+Utilizei o Visual Studio Code como minha IDE de desenvolvimento.
+Garanti que tinha o Node.js e o npm (gerenciador de pacotes do Node.js) instalados em meu ambiente.
+Iniciei um projeto no Visual Studio Code.
+Estrutura do projeto:
+
+Criei uma estrutura de diretórios para o projeto, onde tive uma pasta para os arquivos HTML, CSS, JavaScript, Sass e outros recursos, como imagens e fontes.
+Iniciei um repositório Git local para versionamento do código.
+
+inicialização do repositório Git:
+
+No diretório raiz do projeto, abri o terminal.
+Executei o comando git init para iniciar um repositório Git local.
+Controle de versões:
+
+À medida que desenvolvi o chat bot, fiz commits regulares usando o comando git commit -m "mensagem do commit" para criar checkpoints do código.
+Utilizei commits significativos, com mensagens descritivas, para acompanhar as alterações feitas.
+Configuração do repositório remoto:
+
+Criei um repositório no GitHub para hospedar o código do chat bot.
+Copiei o URL do repositório remoto do GitHub.
+Conexão do repositório local com o remoto:
+
+No terminal do Git, executei o comando git remote add origin <URL do repositório remoto> para conectar o repositório local ao remoto.
+Push para o repositório remoto:
+
+Quando estava pronto para enviar o código ao repositório remoto, executei o comando git push origin master para enviar os commits locais para o repositório remoto no branch "master".
+A partir desse momento, meu código do chat bot estava versionado e hospedado no GitHub. Eu poderia continuar a desenvolver o projeto, criando novos commits e utilizando comandos como git pull para obter as últimas alterações do repositório remoto, ou git branch para criar e gerenciar branches. O versionamento do código permitiu que eu acompanhasse e revertesse alterações, através dos commits contribui para o diário de bordo do projeto e mantivesse um histórico confiável do progresso do projeto.
+
+HTML:
+
+Criei um arquivo HTML para a estrutura básica do chat bot.
+Adicionei os elementos HTML necessários para a interface do chat bot, como campos de entrada de texto, área de mensagens exibidas, botões etc.
+CSS e SASS:
+
+Criei um arquivo CSS e utilizei SASS para estilizar o chat bot.
+Importei bibliotecas CSS, como Animate.css, para adicionar animações e estilos pré-definidos.
+Utilizei o pré-processador SASS para escrever estilos mais eficientes e organizados.
+Compilei o arquivo SASS em CSS utilizando uma extensão do Visual Studio Code para compilar automaticamente (Live Sass Compiler).
+JavaScript e MVC:
+
+Criei um arquivo JavaScript para manipular a lógica do chat bot.
+Utilizei o padrão de arquitetura MVC (Model-View-Controller) para separar a lógica em diferentes camadas.
+Implementei a parte do modelo (model) para armazenar as mensagens do chat, histórico de conversas etc.
+Implementei a parte da visualização (view) para atualizar a interface do chat bot com base nos dados do modelo.
+Implementei a parte do controlador (controller) para lidar com a interação do usuário, enviar mensagens, receber respostas etc.
+Integração de bibliotecas:
+
+Utilizei bibliotecas como AlertifyJS e SweetAlert2 para exibir alertas, notificações ou mensagens de confirmação em momentos relevantes.
+Integrei essas bibliotecas ao meu código JavaScript, importando-as e utilizando seus métodos de acordo com as necessidades do chat bot.
+Utilização do React.js:
+
+Para criar uma versão do chat bot utilizando React.js, criei um novo projeto React.js.
+Dividi os componentes em partes menores para uma melhor organização e reutilização de código.
+Utilizei o React.js para criar a interface do chat bot, manipular estados e renderizar os componentes de acordo com as interações do usuário.
+Utilizei o npm para fazer o download das dependências necessárias para o React.js e hospedei em uma branch separada no meu repositório no github
