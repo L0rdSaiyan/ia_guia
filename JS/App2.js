@@ -78,14 +78,14 @@ btnEnviar.addEventListener("click", function () {
     })
 
   }else{
-
   let novaMsg = msgEnviar.value;
   msgEnviar.value = ''
   cabecalho.innerHTML = user;
  
 
   msgEnviada.innerText = novaMsg;
-  chat2.className = "chat-2";
+  chat2.classList.add("chat-2")
+  chat2.classList.remove("chat-2Inv")
 
   arraySaudacao.forEach((elemento, index) => {
     if (novaMsg.toLowerCase().includes(elemento)) {
@@ -126,13 +126,18 @@ btnEnviar.addEventListener("click", function () {
   msgBot += ". Sua sugestão foi registrada!"
 
   setTimeout(() => {
-    chat3.className = "chat-3";
+    chat3.classList.add("chat-3")
+    chat3.classList.remove("chat-3Inv")
     chatBot.innerHTML = msgBot;
   }, 3000);
 
 
   setTimeout(()=>{
 
+    chat2.classList.add("chat-2Inv")
+    chat2.classList.remove("chat-2")
+    chat3.classList.add("chat-3Inv")
+    chat3.classList.remove("chat-3")
 
     Swal.fire({
       title: 'Obrigado!',
@@ -171,7 +176,9 @@ document.addEventListener("keydown", (event) => {
     let novaMsg = msgEnviar.value;
     cabecalho.innerHTML = user;
     msgEnviada.innerText = novaMsg;
-    chat2.className = "chat-2";
+
+    chat2.classList.add("chat-2")
+    chat2.classList.remove("chat-2Inv")
     msgEnviar.value = ''
 
     let msgBot = ""; // inicializa com valor padrão vazio
@@ -223,6 +230,11 @@ document.addEventListener("keydown", (event) => {
   
 
   setTimeout(()=>{
+
+    chat2.classList.add("chat-2Inv")
+    chat2.classList.remove("chat-2")
+    chat3.classList.add("chat-3Inv")
+    chat3.classList.remove("chat-3")
 
 
     Swal.fire({
