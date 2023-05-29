@@ -237,10 +237,17 @@ function surprise(event) {
   let x = event.keyCode;
   let y = String.fromCharCode(x);
   const bot = document.querySelector("#robozin");
+  const fundo = document.querySelector("#hexagonGrid")
+  const musicaImperio = document.querySelector("#imperio")
   let char;
   arr.push(y);
 
   if (arr.join("") === "yoda") {
+    
+    if(fundo && fundo.id === "hexagonGridSith"){
+    fundo.id = "hexagonGrid"
+  
+    }
     char = "/Media/yoda.jpg";
     bot.src = char;
     arr.forEach((elemento, index) => {
@@ -250,6 +257,10 @@ function surprise(event) {
   } else if (arr.join("") === "vader") {
     let char = "/Media/darth_vader.jpg";
     bot.src = char;
+   fundo.id = "hexagonGridSith"
+    musicaImperio.play()
+
+
     arr.forEach((elemento, index) => {
       delete arr[index];
     });

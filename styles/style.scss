@@ -282,6 +282,60 @@ section {
 }
 
 
+#hexagonGridSith {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  
+  .row {
+    display: inline-flex;
+    margin-top: -32px;
+    margin-left: -50px;
+    
+    &:nth-child(even) {
+      margin-left: 2px;
+    }
+    
+    .hexagon {
+      position: relative;
+      width: 100px; height: 110px;
+      margin: 4px 2px;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); 
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: #000000;
+        opacity: 0.95;
+        transition: 1s;
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 4px; right: 4px; bottom: 4px; left: 4px;
+        background: #141414;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      }
+      
+      &:hover {
+        &::before {
+          background:#990000;
+          opacity: 1;
+          transition: 0s;
+        }
+        
+        &::after {
+          background: #000000;
+        }
+      }
+    }
+  }
+}
+
 .container{
   display: flex;
   justify-content: center;
