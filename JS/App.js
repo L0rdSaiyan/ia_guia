@@ -1,6 +1,5 @@
-const cvs = document.getElementById('particles');
-const ctx = cvs.getContext('2d');
-
+const cvs = document.getElementById("particles");
+const ctx = cvs.getContext("2d");
 
 cvs.width = window.innerWidth;
 cvs.height = window.innerHeight;
@@ -8,135 +7,141 @@ cvs.height = window.innerHeight;
 let particlesArray;
 
 let mouse = {
-    x: null,
-    y: null,
-    radius: 170
-}
+  x: null,
+  y: null,
+  radius: 170,
+};
 
-window.addEventListener('mousemove', function(event) {
-    mouse.x = event.x;
-    mouse.y = event.y;
-    mouse.radius = 170;
-    console.log(mouse.radius);
+window.addEventListener("mousemove", function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+  mouse.radius = 170;
+  console.log(mouse.radius);
 });
 
-document.onmousemove = (function(event) {
-    var onmousestop = function() {
-        mouse.radius = 0;
-    }, thread;
+document.onmousemove = (function (event) {
+  var onmousestop = function () {
+      mouse.radius = 0;
+    },
+    thread;
 
-    return function() {
-        clearTimeout(thread);
-        thread = setTimeout(onmousestop, 10);
-    };
+  return function () {
+    clearTimeout(thread);
+    thread = setTimeout(onmousestop, 10);
+  };
 })();
 
-
 class Particle {
-    constructor(x, y, directionX, directionY, size, color) {
-        this.x = x;
-        this.y = y;
-        this.directionX = directionX;
-        this.directionY = directionY;
-        this.size = size;
-        this.color = color;
+  constructor(x, y, directionX, directionY, size, color) {
+    this.x = x;
+    this.y = y;
+    this.directionX = directionX;
+    this.directionY = directionY;
+    this.size = size;
+    this.color = color;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+    ctx.fillStyle = "#72C100";
+    ctx.fill();
+  }
+
+  update() {
+    if (this.x > cvs.width || this.x < 0) {
+      this.directionX = -this.directionX;
     }
 
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = '#72C100';
-        ctx.fill();
+    if (this.y > cvs.height || this.y < 0) {
+      this.directionY = -this.directionY;
     }
 
-    update() {
-        if (this.x > cvs.width || this.x < 0) {
-            this.directionX = -this.directionX;
-        }
+    let dx = mouse.x - this.x;
+    let dy = mouse.y - this.y;
+    let distance = Math.sqrt(dx * dx + dy * dy);
+    if (distance < mouse.radius + this.size) {
+      if (mouse.x < this.x && this.x < cvs.width - this.size * 10) {
+        this.x += 10;
+      }
 
-        if (this.y > cvs.height || this.y < 0) {
-            this.directionY = -this.directionY;
-        }
+      if (mouse.x > this.x && this.x > this.size * 10) {
+        this.x -= 10;
+      }
 
-        let dx = mouse.x - this.x;
-        let dy = mouse.y - this.y;
-        let distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < mouse.radius + this.size) {
-            if (mouse.x < this.x && this.x < cvs.width - this.size * 10) {
-                this.x += 10;
-            }
+      if (mouse.y < this.y && this.y < cvs.height - this.size * 10) {
+        this.y += 10;
+      }
 
-            if (mouse.x > this.x && this.x > this.size * 10) {
-                this.x -= 10;
-            }
-
-            if (mouse.y < this.y && this.y < cvs.height - this.size * 10) {
-                this.y += 10;
-            }
-
-            if (mouse.y > this.y && this.y > this.size * 10) {
-                this.y -= 10;
-            }
-        }
-        this.x += this.directionX;
-        this.y += this.directionY;
-
-        this.draw();
+      if (mouse.y > this.y && this.y > this.size * 10) {
+        this.y -= 10;
+      }
     }
+    this.x += this.directionX;
+    this.y += this.directionY;
+
+    this.draw();
+  }
 }
 
 function init() {
-    particlesArray = [];
-    let numberOfParticles = (cvs.height * cvs.width) / 9000;
-    for (let i = 0; i < numberOfParticles * 0.25; i++) {
-        let size = (Math.random() * 35) + 1;
-        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-        let y = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-        let directionX = (Math.random() * 5) - 2.5;
-        let directionY = (Math.random() * 5) - 2.5;
-        let color = '#72C100';
-        particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
-    }
+  particlesArray = [];
+  let numberOfParticles = (cvs.height * cvs.width) / 9000;
+  for (let i = 0; i < numberOfParticles * 0.25; i++) {
+    let size = Math.random() * 35 + 1;
+    let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
+    let y = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
+    let directionX = Math.random() * 5 - 2.5;
+    let directionY = Math.random() * 5 - 2.5;
+    let color = "#72C100";
+    particlesArray.push(
+      new Particle(x, y, directionX, directionY, size, color)
+    );
+  }
 }
 
 function connect() {
-    let opacityValue = 1;
-    for (let i = 0; i < particlesArray.length; i++) {
-        for (let j = i; j < particlesArray.length; j++) {
-            let distance = ((particlesArray[i].x - particlesArray[j].x) * (particlesArray[i].x - particlesArray[j].x)) + ((particlesArray[i].y - particlesArray[j].y) * (particlesArray[i].y - particlesArray[j].y));
+  let opacityValue = 1;
+  for (let i = 0; i < particlesArray.length; i++) {
+    for (let j = i; j < particlesArray.length; j++) {
+      let distance =
+        (particlesArray[i].x - particlesArray[j].x) *
+          (particlesArray[i].x - particlesArray[j].x) +
+        (particlesArray[i].y - particlesArray[j].y) *
+          (particlesArray[i].y - particlesArray[j].y);
 
-            if (distance < (cvs.width/ 7) * (cvs.height / 7)) {
-                opacityValue = 1 - (distance / 20000);
-                ctx.strokeStyle = 'rgba(159, 253, 50,' + opacityValue + ')';
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
-                ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
-                ctx.stroke();
-            }
-        }
+      if (distance < (cvs.width / 7) * (cvs.height / 7)) {
+        opacityValue = 1 - distance / 20000;
+        ctx.strokeStyle = "rgba(159, 253, 50," + opacityValue + ")";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+        ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+        ctx.stroke();
+      }
     }
+  }
 }
 
 function animate() {
-    requestAnimationFrame(animate);
-    ctx.clearRect(0, 0, innerWidth, innerHeight);
-    for (let i = 0; i < particlesArray.length; i++) {
-        particlesArray[i].update();
-    }
-    connect();
+  requestAnimationFrame(animate);
+  ctx.clearRect(0, 0, innerWidth, innerHeight);
+  for (let i = 0; i < particlesArray.length; i++) {
+    particlesArray[i].update();
+  }
+  connect();
 }
 
-window.addEventListener('resize', function() {
-    cvs.width = innerWidth;
-    cvs.height = this.innerHeight;
-    mouse.radius = 170;
-    init();
+window.addEventListener("resize", function () {
+  cvs.width = innerWidth;
+  cvs.height = this.innerHeight;
+  mouse.radius = 170;
+  init();
 });
 
-window.addEventListener('mouseout', function() {
-    mouse.x = undefined;
-    mouse.y = undefined;
+window.addEventListener("mouseout", function () {
+  mouse.x = undefined;
+  mouse.y = undefined;
 });
 
 init();
@@ -149,7 +154,7 @@ function hexagonGrid() {
 
   let wall = {
     width: CONTAINER.offsetWidth,
-    height: CONTAINER.offsetHeight
+    height: CONTAINER.offsetHeight,
   };
 
   let rowsNumber = Math.ceil(wall.height / 80);
@@ -176,14 +181,11 @@ function hexagonGrid() {
 
 hexagonGrid();
 
-window.addEventListener('resize', function() {
+window.addEventListener("resize", function () {
   hexagonGrid();
 });
 
-
-
-
-const popupBarraCeara = ()=>{
+const popupBarraCeara = () => {
   const informacoes = `
   <p>A Barra do Ceará é um bairro localizado na região oeste de Fortaleza, capital do estado do Ceará, no Brasil. Conhecido por suas belas praias e paisagens naturais, a Barra do Ceará atrai tanto os moradores locais como os turistas que visitam a cidade. Vou apresentar alguns dos seus principais pontos turísticos com detalhes.</p>
   <h3>Pontos Turísticos da Barra do Ceará</h3>
@@ -200,20 +202,15 @@ const popupBarraCeara = ()=>{
   Lembre-se de verificar as condições climáticas e as recomendações de segurança antes de visitar qualquer local. Aproveite sua visita à Barra do Ceará!</p>
 `;
 
+  Swal.fire({
+    title: "Informações sobre a Barra do Ceará",
+    html: informacoes,
+    icon: "info",
+    confirmButtonText: "Fechar",
+  });
+};
 
-Swal.fire({
-  title: 'Informações sobre a Barra do Ceará',
-  html: informacoes,
-  icon: 'info',
-  confirmButtonText: 'Fechar'
-});
-
-
-
-}
-
-
-const confirmEntrar = ()=> {
+const confirmEntrar = () => {
   let sala = document.getElementById("sala");
   let text = sala.options[sala.selectedIndex].text;
   let usuario = document.getElementById("usuario").value;
@@ -233,8 +230,33 @@ const confirmEntrar = ()=> {
       window.location.replace("/Pages/Page2.html");
     }, 2000);
   }
+};
+let arr = [];
+
+function surprise(event) {
+  let x = event.keyCode;
+  let y = String.fromCharCode(x);
+  const bot = document.querySelector("#robozin");
+  let char;
+  arr.push(y);
+
+  if (arr.join("") === "yoda") {
+    char = "/Media/yoda.jpg";
+    bot.src = char;
+    arr.forEach((elemento, index) => {
+      delete arr[index];
+    });
+    window.localStorage.setItem("personagem", char);
+  } else if (arr.join("") === "vader") {
+    let char = "/Media/darth_vader.jpg";
+    bot.src = char;
+    arr.forEach((elemento, index) => {
+      delete arr[index];
+    });
+    window.localStorage.setItem("personagem", char);
+  }
 }
-let arr = []
+
 /*
 function surprise(event){
 
