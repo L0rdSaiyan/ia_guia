@@ -254,6 +254,19 @@ function surprise(event) {
       delete arr[index];
     });
     window.localStorage.setItem("personagem", char);
+  }else{
+
+    setTimeout(()=>{
+
+      arr.forEach((elemento, index) => {
+        delete arr[index];
+      });
+
+
+
+    },3000)
+
+
   }
 }
 

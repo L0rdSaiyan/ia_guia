@@ -69,9 +69,9 @@ if(charr==="/Media/yoda.jpg"){
 
   fala1.innerText = `Olá, ${user} Um Chatbot projetado pelo Grupo de Guia de Turismo para a feira de ciências sobre o tema robótica eu sou. Colher sugestões sustentáveis é meu objetivo. Hmm. Sim, sim. Fortes ideias sustentáveis podemos cultivar juntos.`
 
-}else if(charr==="/Media/darth_vader.jpng"){
+}else if(charr==="/Media/darth_vader.jpg"){
 
-fala1.innerText = `Olá, ${user} Eu sou o Darth Vader, mestre das trevas e senhor supremo do Império Galáctico. Este Chatbot foi criado pelo grupo de guia de turismo para a feira de ciências sobre o tema "robótica". Meu objetivo é extrair sugestões sustentáveis. Venha para o lado sombrio da ecologia e compartilhe suas ideias para um futuro mais sustentável.`
+fala1.innerText = `Olá, ${user} Este Chatbot foi criado pelo grupo de guia de turismo para a feira de ciências sobre o tema "robótica". Meu objetivo é extrair sugestões sustentáveis. Venha para o lado sombrio da ecologia e compartilhe suas ideias para um futuro mais sustentável.`
 
 }
 
