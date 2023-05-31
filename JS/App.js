@@ -239,6 +239,7 @@ function surprise(event) {
   const bot = document.querySelector("#robozin");
   const fundo = document.querySelector("#hexagonGrid")
   const musicaImperio = document.querySelector("#imperio")
+  let musica = document.getElementById("jorge")
   let char;
   arr.push(y);
 
@@ -250,6 +251,9 @@ function surprise(event) {
     }
     char = "/Media/yoda.jpg";
     bot.src = char;
+    musicaImperio.pause()
+    musica.currentTime = 14
+    musica.play()
     arr.forEach((elemento, index) => {
       delete arr[index];
     });
@@ -257,15 +261,16 @@ function surprise(event) {
   } else if (arr.join("") === "vader") {
     let char = "/Media/darth_vader.jpg";
     bot.src = char;
+    musica.pause()
+     musicaImperio.play()
    fundo.id = "hexagonGridSith"
-    musicaImperio.play()
 
 
     arr.forEach((elemento, index) => {
       delete arr[index];
     });
     window.localStorage.setItem("personagem", char);
-  }else{
+  } else{
 
     setTimeout(()=>{
 
