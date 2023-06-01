@@ -73,6 +73,11 @@ if(charr==="/Media/yoda.jpg"){
 
 fala1.innerText = `Olá, ${user} Este Chatbot foi criado pelo grupo de guia de turismo para a feira de ciências sobre o tema "robótica". Meu objetivo é extrair sugestões sustentáveis. Venha para o lado sombrio da ecologia e compartilhe suas ideias para um futuro mais sustentável.`
 
+}else if(charr==="/Media/franky.png"){
+
+
+  fala1.innerText = `SUUPPEEERRR! ${user} eu sou um chatbot hiper-hirado criado pelo grupo de guia de turismo para a feira de ciências sobre o tema "robótica". O pae ta aqui pra pegar as informações sustentáveis dos usuários. Manda bala!`
+
 }
 
 logo.addEventListener("click", () => {

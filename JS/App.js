@@ -106,7 +106,7 @@ function connect() {
     for (let j = i; j < particlesArray.length; j++) {
       let distance =
         (particlesArray[i].x - particlesArray[j].x) *
-          (particlesArray[i].x - particlesArray[j].x) +
+          (particlesArray[i].x  - particlesArray[j].x) +
         (particlesArray[i].y - particlesArray[j].y) *
           (particlesArray[i].y - particlesArray[j].y);
 
@@ -185,31 +185,38 @@ window.addEventListener("resize", function () {
   hexagonGrid();
 });
 
-const popupBarraCeara = () => {
-  const informacoes = `
-  <p>A Barra do Ceará é um bairro localizado na região oeste de Fortaleza, capital do estado do Ceará, no Brasil. Conhecido por suas belas praias e paisagens naturais, a Barra do Ceará atrai tanto os moradores locais como os turistas que visitam a cidade. Vou apresentar alguns dos seus principais pontos turísticos com detalhes.</p>
-  <h3>Pontos Turísticos da Barra do Ceará</h3>
-  <ul>
-    <li>Praia da Barra do Ceará: Bela praia com areias brancas e águas azuis.</li>
-    <li>Ponte Metálica: Uma ponte histórica que atravessa o Rio Ceará.</li>
-    <li>Farol da Barra do Ceará: Oferece uma vista deslumbrante da região.</li>
-    <li>Estátua de Iracema: Homenagem à personagem do romance de José de Alencar.</li>
-    <li>Mercado da Barra: Local para encontrar produtos típicos e experimentar a culinária local.</li>
-    <li>Passeio de barco pelo Rio Ceará: Uma atividade relaxante para desfrutar da paisagem.</li>
-  </ul>
-  <p>Além desses pontos turísticos específicos, a Barra do Ceará também é conhecida por suas festas tradicionais, como o Carnaval e o São João, quando o bairro ganha vida com música, dança e comidas típicas.
-
-  Lembre-se de verificar as condições climáticas e as recomendações de segurança antes de visitar qualquer local. Aproveite sua visita à Barra do Ceará!</p>
+// variável que recebe a informação a ser apresentada no popup do SweetAlert
+let informacoes = `
+<p>A Barra do Ceará é um bairro localizado na região oeste de Fortaleza, capital do estado do Ceará, no Brasil. Conhecido por suas belas praias e paisagens naturais, a Barra do Ceará atrai tanto os moradores locais como os turistas que visitam a cidade. Vou apresentar alguns dos seus principais pontos turísticos com detalhes.</p>
+<h3>Pontos Turísticos da Barra do Ceará</h3>
+<ul>
+  <li>Praia da Barra do Ceará: Bela praia com areias brancas e águas azuis.</li>
+  <li>Ponte Metálica: Uma ponte histórica que atravessa o Rio Ceará.</li>
+  <li>Farol da Barra do Ceará: Oferece uma vista deslumbrante da região.</li>
+  <li>Estátua de Iracema: Homenagem à personagem do romance de José de Alencar.</li>
+  <li>Mercado da Barra: Local para encontrar produtos típicos e experimentar a culinária local.</li>
+  <li>Passeio de barco pelo Rio Ceará: Uma atividade relaxante para desfrutar da paisagem.</li>
+</ul>
+<p>Além desses pontos turísticos específicos, a Barra do Ceará também é conhecida por suas festas tradicionais, como o Carnaval e o São João, quando o bairro ganha vida com música, dança e comidas típicas.
+Lembre-se de verificar as condições climáticas e as recomendações de segurança antes de visitar qualquer local. Aproveite sua visita à Barra do Ceará!</p>
 `;
 
-  Swal.fire({
-    title: "Informações sobre a Barra do Ceará",
-    html: informacoes,
-    icon: "info",
-    confirmButtonText: "Fechar",
-  });
+
+
+let titulo = "Informações sobre a Barra do Ceará"
+const popupBarraCeara = () => {
+Swal.fire({
+     title: titulo,
+     html: informacoes,
+     icon: "info",
+     confirmButtonText: "Fechar",
+   });
 };
 
+const popup = document.getElementById("popup")
+popup.addEventListener("click", popupBarraCeara)
+
+//Função para efetuar o login de usuário
 const confirmEntrar = () => {
   let sala = document.getElementById("sala");
   let text = sala.options[sala.selectedIndex].text;
@@ -225,14 +232,15 @@ const confirmEntrar = () => {
         alertify.success("Aproveite!");
       }
     );
-
     setTimeout(() => {
       window.location.replace("/Pages/Page2.html");
     }, 2000);
   }
 };
+
 let arr = [];
 
+//Função easter egg que muda o icone do bot
 function surprise(event) {
   let x = event.keyCode;
   let y = String.fromCharCode(x);
@@ -240,50 +248,119 @@ function surprise(event) {
   const fundo = document.querySelector("#hexagonGrid")
   const musicaImperio = document.querySelector("#imperio")
   let musica = document.getElementById("jorge")
-  let char;
-  arr.push(y);
+  let char;     //Variável chave que irá armazenar o valor do personagem 
+  let btn = document.getElementById("entrar")
+  let frankySuper = document.getElementById("superAudio")
 
-  if (arr.join("") === "yoda") {
+  arr.push(y); //KeyCodes que serão inseridos depois de serem convertidos para caracteres
+
+  if (arr.join("").toLowerCase() === "yoda") {
     
     if(fundo && fundo.id === "hexagonGridSith"){
     fundo.id = "hexagonGrid"
   
     }
+    //Manipulação das variáveis e dos elementos do DOM
     char = "/Media/yoda.jpg";
     bot.src = char;
     musicaImperio.pause()
+    frankySuper.pause()
     musica.currentTime = 14
+    btn.style.backgroundColor = "#4fc7ff"
+    popup.style.color = "#1FF062"
     musica.play()
+    popup.innerText = "Informações sobre a Barra do Ceará e o Império Galáctico"
+
     arr.forEach((elemento, index) => {
       delete arr[index];
     });
     window.localStorage.setItem("personagem", char);
-  } else if (arr.join("") === "vader") {
-    let char = "/Media/darth_vader.jpg";
+  }   else if (arr.join("").toLowerCase() === "vader") {
+
+    char = "/Media/darth_vader.jpg";
     bot.src = char;
     musica.pause()
-     musicaImperio.play()
-   fundo.id = "hexagonGridSith"
+    frankySuper.pause()
+    musicaImperio.play()
+    informacoes = `
+    <h3>Sustentabilidade no Império Galactico e na Barra do Ceará </h3>
+    <p>A Barra do Ceará é um bairro localizado na região oeste de Fortaleza, capital do estado do Ceará, no Brasil. Conhecido por suas belas praias e paisagens naturais, a Barra do Ceará atrai tanto os moradores locais como os turistas que visitam a cidade. Vou apresentar alguns dos seus principais pontos turísticos com detalhes.</p>
+    <h3>Pontos Turísticos da Barra do Ceará</h3>
+  <ul>
+  <li>Praia da Barra do Ceará: Bela praia com areias brancas e águas azuis.</li>
+  <li>Ponte Metálica: Uma poimage-removebg-preview.pngnte histórica que atravessa o Rio Ceará.</li>
+  <li>Farol da Barra do Ceará: Oferece uma vista deslumbrante da região.</li>
+  <li>Estátua de Iracema: Homenagem à personagem do romance de José de Alencar.</li>
+  <li>Mercado da Barra: Local para encontrar produtos típicos e experimentar a culinária local.</li>
+  <li>Passeio de barco pelo Rio Ceará: Uma atividade relaxante para desfrutar da paisagem.</li>
+</ul>
+<p>Além desses pontos turísticos específicos, a Barra do Ceará também é conhecida por suas festas tradicionais, como o Carnaval e o São João, quando o bairro ganha vida com música, dança e comidas típicas.</p>
+<p>A coleta de sugestões de sustentabilidade não apenas fortalecerá nossa abordagem para o futuro, mas também envolverá nossos cidadãos e colaboradores no processo de tomada de decisões. Juntos, podemos construir um Império Galáctico mais sustentável, onde a Barra do Ceará e outras regiões prosperem em harmonia com o meio ambiente.</p>
+Lembre-se de verificar as condições climáticas e as recomendações de segurança antes de visitar qualquer local. Aproveite sua visita à Barra do Ceará!</p>
+`;
+//Alterando os valores e propriedades dos elementos no DOM
+titulo = "Informações sobre Sustentabilidade no Império Galactico e na Barra do Ceará"
+popup.innerText = "Informações sobre a Barra do Ceará e o Império Galáctico"
+popup.style.color = "Red"
+btn.style.backgroundColor = "#990000"
+
+if(btn.style.backgroundColor === "#4fc7ff"){
+
+  btn.style.backgroundColor = "#990000"
+  popup.style.color = "Red"
+
+  
+}
 
 
-    arr.forEach((elemento, index) => {
-      delete arr[index];
+arr.forEach((elemento, index) => {
+  delete arr[index];
     });
     window.localStorage.setItem("personagem", char);
-  } else{
+ 
+ 
+  }else if(arr.join("").toLowerCase() === "franky"){
 
-    setTimeout(()=>{
+    char = "/Media/franky.png"
+    titulo = "Informações a Barra do Ceará"
+    btn.style.backgroundColor = "#4fc7ff"
+    popup.style.color = "#1FF062"
+    bot.src = char
+    popup.innerText = "SUUUPPEEERR! Informações sobre a Barra do Ceará"
+    informacoes = `
+<p>A Barra do Ceará é um bairro localizado na região oeste de Fortaleza, capital do estado do Ceará, no Brasil. Conhecido por suas belas praias e paisagens naturais, a Barra do Ceará atrai tanto os moradores locais como os turistas que visitam a cidade. Vou apresentar alguns dos seus principais pontos turísticos com detalhes.</p>
+<h3>Pontos Turísticos da Barra do Ceará</h3>
+<ul>
+  <li>Praia da Barra do Ceará: Bela praia com areias brancas e águas azuis.</li>
+  <li>Ponte Metálica: Uma ponte histórica que atravessa o Rio Ceará.</li>
+  <li>Farol da Barra do Ceará: Oferece uma vista deslumbrante da região.</li>
+  <li>Estátua de Iracema: Homenagem à personagem do romance de José de Alencar.</li>
+  <li>Mercado da Barra: Local para encontrar produtos típicos e experimentar a culinária local.</li>
+  <li>Passeio de barco pelo Rio Ceará: Uma atividade relaxante para desfrutar da paisagem.</li>
+</ul>
+<p>Além desses pontos turísticos específicos, a Barra do Ceará também é conhecida por suas festas tradicionais, como o Carnaval e o São João, quando o bairro ganha vida com música, dança e comidas típicas.
+Lembre-se de verificar as condições climáticas e as recomendações de segurança antes de visitar qualquer local. Aproveite sua visita à Barra do Ceará!</p>
+`;
 
-      arr.forEach((elemento, index) => {
-        delete arr[index];
-      });
-
-
-
-    },3000)
+    musicaImperio.pause()
+    musica.pause()
+    frankySuper.play()
+    window.localStorage.setItem("personagem", char);
 
 
   }
+  
+  
+  
+  
+  else{
+        setTimeout(()=>{
+        arr.forEach((elemento, index) => {
+          delete arr[index];
+        });
+      },3000)
+    }
+    fundo.id = "hexagonGridSith"
 }
 
 /*
@@ -322,7 +399,6 @@ function surprise(event){
 
 
   }
-
 
 }
 
