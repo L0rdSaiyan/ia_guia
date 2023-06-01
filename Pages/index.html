@@ -5,72 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat Bot Guia</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js" defer></script>
-    <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.css">
+    <script
+      src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"
+      defer
+    ></script>
     <link
-    rel="stylesheet"
-    href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
-    />    
-    <link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
-    <link rel="shortcut icon" href="/Media/robot-top-hat.gif" type="image/x-icon">
-    <script src="/JS/App.js" defer ></script>
+      rel="stylesheet"
+      href="/node_modules/sweetalert2/dist/sweetalert2.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <link rel="stylesheet" href="/node_modules/animate.css/animate.min.css" />
+    <link
+      rel="shortcut icon"
+      href="/Media/robot-top-hat.gif"
+      type="image/x-icon"
+    />
+    <script src="/JS/App.js" defer></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
   </head>
 
-  <body onkeypress="surprise(event)" >
-
-    
-
+  <body onkeypress="surprise(event)">
     <section>
-  
       <!-- PARTICLES -->
       <canvas id="particles"></canvas>
-      
+
       <!-- HEXAGON GRID -->
       <div id="hexagonGrid"></div>
-      
     </section>
 
-
-  <div class="container">
-    <div class="robot">
-      <img src="/Media/robot-top-hat.gif" alt="logo robô" id="robozin" />
-     
-    </div>
-    
-    <div class="inputs">
-      <input type="text" id="usuario" placeholder="Usuário" />
-      <select name="select" id="sala">
-        <option value="1enfermagem">1° Enfermagem</option>
-        <option value="1guia">1° Guia de Turismo</option>
-        <option value="1informática">1° Informática</option>
-        <option value="2enfermagem">2° Enfermagem</option>
-        <option value="2guia">2° Guia de Turismo</option>
-        <option value="2infor">2° Informática</option>
-        <option value="3enfer">3° Enfermagem</option>
-        <option value="3guia">3° Guia de Turismo</option>
-        <option value="3infor">3° Informática</option>
-      </select>
-      <button id="entrar" onclick="confirmEntrar()">Entrar</button>
-    </div>
-    <span class="popup" id="popup">Clique aqui para obter informações sobre a Barra do Ceará</span>
-
-</div>
-    
-
-    <!-- <div id="container">
+    <div class="container">
       <div class="robot">
-        <img src="robot-top-hat.gif" alt="logo robô" id="robozin" />
-       
+        <img src="/Media/robot-top-hat.gif" alt="logo robô" id="robozin" />
       </div>
-      
+
       <div class="inputs">
         <input type="text" id="usuario" placeholder="Usuário" />
         <select name="select" id="sala">
           <option value="1enfermagem">1° Enfermagem</option>
-          <option value="1guia">1° Guia de Turismo</option>y
+          <option value="1guia">1° Guia de Turismo</option>
           <option value="1informática">1° Informática</option>
           <option value="2enfermagem">2° Enfermagem</option>
           <option value="2guia">2° Guia de Turismo</option>
@@ -81,11 +58,12 @@
         </select>
         <button id="entrar" onclick="confirmEntrar()">Entrar</button>
       </div>
-      <footer>
-        <p onclick="popup()">O que Guia de Turismo e Robótica tem a ver com Ações Sustentáveis?</p>
-      </footer>
-    </div> -->
+      <span class="popup" id="popup"
+        >Clique aqui para obter informações sobre a Barra do Ceará</span
+      >
+    </div>
     <audio src="/Media/amiga-minha-mulher.mp3" id="jorge"></audio>
-    <audio src="/Media/empire-theme.mp3" id="imperio"></audio>  </body>
-    <audio src="/Media/super.mp3" id="superAudio"></audio>
-    </html>
+    <audio src="/Media/empire-theme.mp3" id="imperio"></audio>
+  </body>
+  <audio src="/Media/super.mp3" id="superAudio"></audio>
+</html>

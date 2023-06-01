@@ -39,8 +39,6 @@ body {
   align-items: center;
   position: absolute;
   text-align: center;
-  
-  
 }
 
 #usuario {
@@ -88,8 +86,6 @@ body {
   transition: 200ms;
 }
 
-
-
 #entrar:hover {
   cursor: pointer;
   background-color: #4fffd8;
@@ -98,8 +94,6 @@ body {
   box-shadow: 1px 3px 3px 1px;
   font-weight: bold;
 }
-
-
 
 // footer {
 //   border-color: red;
@@ -112,8 +106,6 @@ body {
 //   animation-name: anima3;
 //   animation-duration: 3s;
 // }
-
-
 
 // footer:hover {
 //   transition: 200ms;
@@ -133,7 +125,6 @@ body {
     width: 300px;
   }
 }
-
 
 @keyframes anima {
   from {
@@ -162,14 +153,9 @@ body {
   }
 }
 
-
-
-
-b{
+b {
   margin-right: 4px;
-  margin-left: 4px
-
-  
+  margin-left: 4px;
 }
 @keyframes bubbleAnima {
   from {
@@ -189,19 +175,16 @@ b{
 @media (max-width: 800px) {
   .bubble {
     font-size: 15px;
-    width: 180px; 
+    width: 180px;
     left: 130px;
     bottom: 80px;
   }
-
 }
-#sala{
-
+#sala {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
 @keyframes popupAnima {
@@ -213,12 +196,12 @@ b{
   }
 }
 
-
-
 section {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 // PARTICLES
@@ -229,50 +212,65 @@ section {
 // HEXAGON GRID
 #hexagonGrid {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  
+
   .row {
     display: inline-flex;
     margin-top: -32px;
     margin-left: -50px;
-    
+
     &:nth-child(even) {
       margin-left: 2px;
     }
-    
+
     .hexagon {
       position: relative;
-      width: 100px; height: 110px;
+      width: 100px;
+      height: 110px;
       margin: 4px 2px;
-      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); 
-      
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
       &::before {
-        content: '';
+        content: "";
         position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background: #000000;
         opacity: 0.95;
         transition: 1s;
       }
-      
+
       &::after {
-        content: '';
+        content: "";
         position: absolute;
-        top: 4px; right: 4px; bottom: 4px; left: 4px;
+        top: 4px;
+        right: 4px;
+        bottom: 4px;
+        left: 4px;
         background: #141414;
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: polygon(
+          50% 0%,
+          100% 25%,
+          100% 75%,
+          50% 100%,
+          0% 75%,
+          0% 25%
+        );
       }
-      
+
       &:hover {
         &::before {
-          background: #8CFD0B;
+          background: #8cfd0b;
           opacity: 1;
           transition: 0s;
         }
-        
+
         &::after {
           background: #000000;
         }
@@ -280,54 +278,68 @@ section {
     }
   }
 }
-
 
 #hexagonGridSith {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  
+
   .row {
     display: inline-flex;
     margin-top: -32px;
     margin-left: -50px;
-    
+
     &:nth-child(even) {
       margin-left: 2px;
     }
-    
+
     .hexagon {
       position: relative;
-      width: 100px; height: 110px;
+      width: 100px;
+      height: 110px;
       margin: 4px 2px;
-      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); 
-      
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
       &::before {
-        content: '';
+        content: "";
         position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background: #000000;
         opacity: 0.95;
         transition: 1s;
       }
-      
+
       &::after {
-        content: '';
+        content: "";
         position: absolute;
-        top: 4px; right: 4px; bottom: 4px; left: 4px;
+        top: 4px;
+        right: 4px;
+        bottom: 4px;
+        left: 4px;
         background: #141414;
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: polygon(
+          50% 0%,
+          100% 25%,
+          100% 75%,
+          50% 100%,
+          0% 75%,
+          0% 25%
+        );
       }
-      
+
       &:hover {
         &::before {
-          background:#990000;
+          background: #990000;
           opacity: 1;
           transition: 0s;
         }
-        
+
         &::after {
           background: #000000;
         }
@@ -336,7 +348,7 @@ section {
   }
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -351,22 +363,19 @@ section {
   width: 460px;
   height: 500px;
   box-shadow: 10px 10px 10px 3px;
-
 }
 
-
-.popup{
+.popup {
   position: absolute;
   top: 78%;
-  color: #1FF062 ;
+  color: #1ff062;
   transition: 200ms;
   animation-name: duvidaAnima;
   animation-duration: 3s;
   padding-top: 10px;
-
 }
 
-.popup::after{
+.popup::after {
   content: "";
   position: absolute;
   top: 0;
@@ -374,13 +383,9 @@ section {
   width: 100%;
   height: 1px;
   background-color: #fff;
-
-
 }
 
-.popup:hover{
-
-  color:  #8CFD0B;
+.popup:hover {
+  color: #8cfd0b;
   cursor: pointer;
 }
-

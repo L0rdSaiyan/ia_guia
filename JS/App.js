@@ -106,7 +106,7 @@ function connect() {
     for (let j = i; j < particlesArray.length; j++) {
       let distance =
         (particlesArray[i].x - particlesArray[j].x) *
-          (particlesArray[i].x  - particlesArray[j].x) +
+          (particlesArray[i].x - particlesArray[j].x) +
         (particlesArray[i].y - particlesArray[j].y) *
           (particlesArray[i].y - particlesArray[j].y);
 
@@ -201,20 +201,18 @@ let informacoes = `
 Lembre-se de verificar as condições climáticas e as recomendações de segurança antes de visitar qualquer local. Aproveite sua visita à Barra do Ceará!</p>
 `;
 
-
-
-let titulo = "Informações sobre a Barra do Ceará"
+let titulo = "Informações sobre a Barra do Ceará";
 const popupBarraCeara = () => {
-Swal.fire({
-     title: titulo,
-     html: informacoes,
-     icon: "info",
-     confirmButtonText: "Fechar",
-   });
+  Swal.fire({
+    title: titulo,
+    html: informacoes,
+    icon: "info",
+    confirmButtonText: "Fechar",
+  });
 };
 
-const popup = document.getElementById("popup")
-popup.addEventListener("click", popupBarraCeara)
+const popup = document.getElementById("popup");
+popup.addEventListener("click", popupBarraCeara);
 
 //Função para efetuar o login de usuário
 const confirmEntrar = () => {
@@ -245,43 +243,41 @@ function surprise(event) {
   let x = event.keyCode;
   let y = String.fromCharCode(x);
   const bot = document.querySelector("#robozin");
-  const fundo = document.querySelector("#hexagonGrid")
-  const musicaImperio = document.querySelector("#imperio")
-  let musica = document.getElementById("jorge")
-  let char;     //Variável chave que irá armazenar o valor do personagem 
-  let btn = document.getElementById("entrar")
-  let frankySuper = document.getElementById("superAudio")
+  const fundo = document.querySelector("#hexagonGrid");
+  const musicaImperio = document.querySelector("#imperio");
+  let musica = document.getElementById("jorge");
+  let char; //Variável chave que irá armazenar o valor do personagem
+  let btn = document.getElementById("entrar");
+  let frankySuper = document.getElementById("superAudio");
 
   arr.push(y); //KeyCodes que serão inseridos depois de serem convertidos para caracteres
 
   if (arr.join("").toLowerCase() === "yoda") {
-    
-    if(fundo && fundo.id === "hexagonGridSith"){
-    fundo.id = "hexagonGrid"
-  
+    if (fundo && fundo.id === "hexagonGridSith") {
+      fundo.id = "hexagonGrid";
     }
     //Manipulação das variáveis e dos elementos do DOM
     char = "/Media/yoda.jpg";
     bot.src = char;
-    musicaImperio.pause()
-    frankySuper.pause()
-    musica.currentTime = 14
-    btn.style.backgroundColor = "#4fc7ff"
-    popup.style.color = "#1FF062"
-    musica.play()
-    popup.innerText = "Informações sobre a Barra do Ceará e o Império Galáctico"
+    musicaImperio.pause();
+    frankySuper.pause();
+    musica.currentTime = 14;
+    btn.style.backgroundColor = "#4fc7ff";
+    popup.style.color = "#1FF062";
+    musica.play();
+    popup.innerText =
+      "Informações sobre a Barra do Ceará e o Império Galáctico";
 
     arr.forEach((elemento, index) => {
       delete arr[index];
     });
     window.localStorage.setItem("personagem", char);
-  }   else if (arr.join("").toLowerCase() === "vader") {
-
+  } else if (arr.join("").toLowerCase() === "vader") {
     char = "/Media/darth_vader.jpg";
     bot.src = char;
-    musica.pause()
-    frankySuper.pause()
-    musicaImperio.play()
+    musica.pause();
+    frankySuper.pause();
+    musicaImperio.play();
     informacoes = `
     <h3>Sustentabilidade no Império Galactico e na Barra do Ceará </h3>
     <p>A Barra do Ceará é um bairro localizado na região oeste de Fortaleza, capital do estado do Ceará, no Brasil. Conhecido por suas belas praias e paisagens naturais, a Barra do Ceará atrai tanto os moradores locais como os turistas que visitam a cidade. Vou apresentar alguns dos seus principais pontos turísticos com detalhes.</p>
@@ -298,35 +294,30 @@ function surprise(event) {
 <p>A coleta de sugestões de sustentabilidade não apenas fortalecerá nossa abordagem para o futuro, mas também envolverá nossos cidadãos e colaboradores no processo de tomada de decisões. Juntos, podemos construir um Império Galáctico mais sustentável, onde a Barra do Ceará e outras regiões prosperem em harmonia com o meio ambiente.</p>
 Lembre-se de verificar as condições climáticas e as recomendações de segurança antes de visitar qualquer local. Aproveite sua visita à Barra do Ceará!</p>
 `;
-//Alterando os valores e propriedades dos elementos no DOM
-titulo = "Informações sobre Sustentabilidade no Império Galactico e na Barra do Ceará"
-popup.innerText = "Informações sobre a Barra do Ceará e o Império Galáctico"
-popup.style.color = "Red"
-btn.style.backgroundColor = "#990000"
+    //Alterando os valores e propriedades dos elementos no DOM
+    titulo =
+      "Informações sobre Sustentabilidade no Império Galactico e na Barra do Ceará";
+    popup.innerText =
+      "Informações sobre a Barra do Ceará e o Império Galáctico";
+    popup.style.color = "Red";
+    btn.style.backgroundColor = "#990000";
 
-if(btn.style.backgroundColor === "#4fc7ff"){
+    if (btn.style.backgroundColor === "#4fc7ff") {
+      btn.style.backgroundColor = "#990000";
+      popup.style.color = "Red";
+    }
 
-  btn.style.backgroundColor = "#990000"
-  popup.style.color = "Red"
-
-  
-}
-
-
-arr.forEach((elemento, index) => {
-  delete arr[index];
+    arr.forEach((elemento, index) => {
+      delete arr[index];
     });
     window.localStorage.setItem("personagem", char);
- 
- 
-  }else if(arr.join("").toLowerCase() === "franky"){
-
-    char = "/Media/franky.png"
-    titulo = "Informações a Barra do Ceará"
-    btn.style.backgroundColor = "#4fc7ff"
-    popup.style.color = "#1FF062"
-    bot.src = char
-    popup.innerText = "SUUUPPEEERR! Informações sobre a Barra do Ceará"
+  } else if (arr.join("").toLowerCase() === "franky") {
+    char = "/Media/franky.png";
+    titulo = "Informações a Barra do Ceará";
+    btn.style.backgroundColor = "#4fc7ff";
+    popup.style.color = "#1FF062";
+    bot.src = char;
+    popup.innerText = "SUUUPPEEERR! Informações sobre a Barra do Ceará";
     informacoes = `
 <p>A Barra do Ceará é um bairro localizado na região oeste de Fortaleza, capital do estado do Ceará, no Brasil. Conhecido por suas belas praias e paisagens naturais, a Barra do Ceará atrai tanto os moradores locais como os turistas que visitam a cidade. Vou apresentar alguns dos seus principais pontos turísticos com detalhes.</p>
 <h3>Pontos Turísticos da Barra do Ceará</h3>
@@ -342,25 +333,18 @@ arr.forEach((elemento, index) => {
 Lembre-se de verificar as condições climáticas e as recomendações de segurança antes de visitar qualquer local. Aproveite sua visita à Barra do Ceará!</p>
 `;
 
-    musicaImperio.pause()
-    musica.pause()
-    frankySuper.play()
+    musicaImperio.pause();
+    musica.pause();
+    frankySuper.play();
     window.localStorage.setItem("personagem", char);
-
-
+  } else {
+    setTimeout(() => {
+      arr.forEach((elemento, index) => {
+        delete arr[index];
+      });
+    }, 3000);
   }
-  
-  
-  
-  
-  else{
-        setTimeout(()=>{
-        arr.forEach((elemento, index) => {
-          delete arr[index];
-        });
-      },3000)
-    }
-    fundo.id = "hexagonGridSith"
+  fundo.id = "hexagonGridSith";
 }
 
 /*

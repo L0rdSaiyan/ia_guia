@@ -208,8 +208,15 @@ section {
   width: 100px;
   height: 110px;
   margin: 4px 2px;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 #hexagonGrid .row .hexagon::before {
   content: "";
@@ -230,11 +237,18 @@ section {
   bottom: 4px;
   left: 4px;
   background: #141414;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 #hexagonGrid .row .hexagon:hover::before {
-  background: #8CFD0B;
+  background: #8cfd0b;
   opacity: 1;
   transition: 0s;
 }
@@ -263,8 +277,15 @@ section {
   width: 100px;
   height: 110px;
   margin: 4px 2px;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 #hexagonGridSith .row .hexagon::before {
   content: "";
@@ -285,8 +306,15 @@ section {
   bottom: 4px;
   left: 4px;
   background: #141414;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 #hexagonGridSith .row .hexagon:hover::before {
   background: #990000;
@@ -317,7 +345,7 @@ section {
 .popup {
   position: absolute;
   top: 78%;
-  color: #1FF062;
+  color: #1ff062;
   transition: 200ms;
   animation-name: duvidaAnima;
   animation-duration: 3s;
@@ -335,6 +363,6 @@ section {
 }
 
 .popup:hover {
-  color: #8CFD0B;
+  color: #8cfd0b;
   cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

@@ -54,7 +54,7 @@ let chatBot = document.querySelector("#chatDoBot");
 let user = window.localStorage.getItem("usuario").replace(/\s+/g, " ").trim();
 let cabecalho = document.querySelector(".header-msg-user");
 const chat1 = (document.querySelector("#chatUser").innerText = user);
-const fala1 = document.querySelector("#fala-chat-1")
+const fala1 = document.querySelector("#fala-chat-1");
 let charr = window.localStorage.getItem("personagem");
 
 const botIcons = document.getElementsByClassName("iconBot");
@@ -65,19 +65,12 @@ for (let i = 0; i < botIcons.length; i++) {
   botIcon.style.backgroundImage = `url(${charr})`;
 }
 
-if(charr==="/Media/yoda.jpg"){
-
-  fala1.innerText = `Olá, ${user} Um Chatbot projetado pelo Grupo de Guia de Turismo para a feira de ciências sobre o tema robótica eu sou. Colher sugestões sustentáveis é meu objetivo. Hmm. Sim, sim. Fortes ideias sustentáveis podemos cultivar juntos.`
-
-}else if(charr==="/Media/darth_vader.jpg"){
-
-fala1.innerText = `Olá, ${user} Este Chatbot foi criado pelo grupo de guia de turismo para a feira de ciências sobre o tema "robótica". Meu objetivo é extrair sugestões sustentáveis. Venha para o lado sombrio da ecologia e compartilhe suas ideias para um futuro mais sustentável.`
-
-}else if(charr==="/Media/franky.png"){
-
-
-  fala1.innerText = `SUUPPEEERRR! ${user} eu sou um chatbot hiper-hirado criado pelo grupo de guia de turismo para a feira de ciências sobre o tema "robótica". O pae ta aqui pra pegar as informações sustentáveis dos usuários. Manda bala!`
-
+if (charr === "/Media/yoda.jpg") {
+  fala1.innerText = `Olá, ${user} Um Chatbot projetado pelo Grupo de Guia de Turismo para a feira de ciências sobre o tema robótica eu sou. Colher sugestões sustentáveis é meu objetivo. Hmm. Sim, sim. Fortes ideias sustentáveis podemos cultivar juntos.`;
+} else if (charr === "/Media/darth_vader.jpg") {
+  fala1.innerText = `Olá, ${user} Este Chatbot foi criado pelo grupo de guia de turismo para a feira de ciências sobre o tema "robótica". Meu objetivo é extrair sugestões sustentáveis. Venha para o lado sombrio da ecologia e compartilhe suas ideias para um futuro mais sustentável.`;
+} else if (charr === "/Media/franky.png") {
+  fala1.innerText = `SUUPPEEERRR! ${user} eu sou um chatbot hiper-hirado criado pelo grupo de guia de turismo para a feira de ciências sobre o tema "robótica". O pae ta aqui pra pegar as informações sustentáveis dos usuários. Manda bala!`;
 }
 
 logo.addEventListener("click", () => {
